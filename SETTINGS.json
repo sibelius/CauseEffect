@@ -1,0 +1,23 @@
+    {
+        "train_pairs_path": "data/CEfinal_train_pairs.csv",
+        "train_target_path": "data/CEfinal_train_target.csv",
+        "train_info_path": "data/CEfinal_train_publicinfo.csv",
+
+        "valid_pairs_path": "data/CEfinal_valid_pairs.csv",
+        "valid_info_path": "data/CEfinal_valid_publicinfo.csv",
+
+        "sup1_train_pairs_path" : "data/SUP1data_text/CEdata_train_pairs.csv",          
+        "sup1_train_target_path" : "data/SUP1data_text/CEdata_train_target.csv",         
+        "sup1_train_info_path" : "data/SUP1data_text/CEdata_train_publicinfo.csv",       
+
+        "sup2_train_pairs_path" : "data/SUP2data_text/CEdata_train_pairs.csv",           
+        "sup2_train_target_path" : "data/SUP2data_text/CEdata_train_target.csv",         
+        "sup2_train_info_path" : "data/SUP2data_text/CEdata_train_publicinfo.csv",        
+
+        "sup3_train_pairs_path" : "data/SUP3data_text/CEdata_train_pairs.csv",           
+        "sup3_train_target_path" : "data/SUP3data_text/CEdata_train_target.csv",                 
+        "sup3_train_info_path" : "data/SUP3data_text/CEdata_train_publicinfo.csv",
+
+        "model_path": "model/basic_python_benchmark.pickle",
+        "submission_path": "submission/basic_python_benchmark.csv"
+}
