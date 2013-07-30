@@ -5,6 +5,10 @@ from scipy.stats.stats import pearsonr
 from igci import igci
 from sklearn.ensemble import RandomForestRegressor
 from sklearn import cross_validation
+import math
+import rpy2.robjects as robjects
+
+r = robjects.r
 
 class FeatureMapper:
     def __init__(self, features):

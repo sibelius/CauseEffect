@@ -37,10 +37,7 @@ def ext():
     total_new_att = np.vstack((train_att, valid_att, sup1_att, sup2_att, sup3_att))
 
     # Save extracted data
-    total_new_att.tofile('total_new_att.np')
-    pickle.dump(total_new_att.shape, open('total_new_att_shape.[', 'wb'))
-
-    return total_new_att
+    np.save('total_new_att.npy', total_new_att)
 
 if __name__ == "__main__":
     ext()
