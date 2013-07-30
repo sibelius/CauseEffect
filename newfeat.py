@@ -1,6 +1,7 @@
 import feature_extractor as feat
 import data_io as d
 import numpy as np
+import pickle
 
 def ext():
     # Read the pairs
@@ -32,22 +33,15 @@ def ext():
     print "Extract Sup3"
     sup3_att = combined.fit_transform(sup3)
 
-    # Save the extracted features
-    print "Save the features"
-    print "Save Train"
-    train_att.tofile('extracted/train_att_1.np')
-    print "Save Valid"
-    valid_att.tofile('extracted/valid_att_1.np')
-    print "Save Sup1"
-    sup1_att.tofile('extracted/sup1_att_1.np')
-    print "Save Sup2"
-    sup2_att.tofile('extracted/sup2_att_1.np')
-    print "Save Sup3"
-    sup3_att.tofile('extracted/sup3_att_1.np')
-
     print "Join"
-    np.vstack((train_att, valid_att, sup1_att, sup2_att, sup3_att))
+    total_new_att = np.vstack((train_att, valid_att, sup1_att, sup2_att, sup3_att))
 
-    print "Fim"
-    return train_att, valid_att, sup1_att, sup2_att, sup3_att, joined_att
+    # Save extracted data
+    total_new_att.tofile('total_new_att.np')
+    pickle.dump(total_new_att.shape, open('total_new_att_shape.[', 'wb'))
+
+    return total_new_att
+
+if __name__ == "__main__":
+    ext()
 
